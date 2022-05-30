@@ -1,0 +1,70 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  font-size: 18px;
+}
+
+.articleContainer {
+  background-image: url("./images/1500_paper.jpg");
+  padding: 10em 10em 16em 6.25em;
+
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.6em;
+  color: #444;
+}
+
+img {
+  width: 40vw;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+figure {
+  margin: 1.6em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+figcaption {
+  font-size: 0.625em;
+}
+
+h1,
+h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 50px;
+  text-transform: capitalize;
+}
+
+p {
+  text-align: justify;
+  text-align-last: justify;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.info > p {
+  text-align: center;
+  text-align-last: center;
+}
+
+q {
+  font-style: italic;
+  margin: 150px;
+  font-size: 1.6em;
+}
