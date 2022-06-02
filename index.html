@@ -4,10 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cool Magazine</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div>
-      <h1>Cool Magazine</h1>
+    <div class="wrapper">
+      <header>
+        <div class="Logo">
+          <a href="index.html" style="cursor:pointer;"><img src="images/Logo.svg"alt="#"></a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li>
+              <a href="issues.html">issues</a>
+            </li>
+            <li>
+              <a href="documentation.html">documentation</a>
+            </li>
+            <li>
+              <a href="about.html">about</a>
+            </li>
+            <li>
+              <a href="disclaimer.html">disclaimer</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="logo-large">
+          <img src="images/Logo.svg"alt="#">
+        </div>
+        <div class="featured">
+          <div class="image-container">
+             <img src="images/magazine.jpg" alt="">
+          </div>
+          <div class="featured-text">
+            <h3>Issue No 3 &rarr;</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, necessitatibus aliquid. Delectus culpa incidunt magni architecto quod. Similique dolore adipisci alias, quo neque odit illum aliquid, autem magni incidunt amet non natus labore velit ratione tempore molestias! Nesciunt, sunt. Dicta natus rerum quis rem maxime culpa! Quibusdam aperiam repudiandae ipsum.</p>
+          </div>
+        </div>
+        <div class="about">
+          <p class="label">About</p>
+          <p class="about-text">
+            TIMELINE MAGAZINE is a website that allows you to change the layout of the article you are reading. Select your favorite topic and have fun changing the graphic style. Your eyes have never seen anything like it!
+          <a href="about.html">READ MORE</a>
+        </p>
+        </div>
+        <div class="disclaimer">
+          
+          <div class="disclaimer-text">
+            <h1 ><a class="headline" href="disclaimer.html">Disclaimer</a></h1>
+            <p class="label">PLEASE READ THE DISCLAIMER BEFORE DICVING INTO THE ISSUES AND ARTICLES OF THE MAGAZINE</p>
+          </div>
+        </div>
+        
+         <footer class="footer">
+        <div class="footer-content">
+          <img style="width: 250px;" src="images/Logo.svg" />
+         
+            <p class="adress">
+                    Informaation modelling and web technologies<br/><br/>University of Bologna
+            </p>
+            
+            <p class="contact-info">
+                William Østensen<br/><br/>
+                Jacopo Bettega<br/><br/>
+                Mathilde Tillman Hegdal
+            </p>
+        </div>
+    </footer>
+      </section>
+     
+
     </div>
+    <script src="script.js"></script>
   </body>
+
+  
 </html>
