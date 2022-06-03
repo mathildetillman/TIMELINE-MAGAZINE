@@ -1,3 +1,10 @@
+:root {
+    --main-bg-color: #070707;
+    --main-text-color: #f7f7f7;
+    --alt-bg-color: #FFFBE4;
+    --header-height: 12vh;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -43,6 +50,7 @@ h1 {
     font-weight: 400;
     text-transform: uppercase;
     color: #f7f7f7;
+    line-height: 110%;
 
 }
 h3 {

@@ -18,13 +18,5 @@ const navSlide = () => {
     burger.classList.toggle("toggle");
   });
 };
-const parallax = () => {
-  window.addEventListener("scroll", () => {
-    const parallax = document.querySelector(".parallax");
-    let scrollPosition = window.pageYOffset;
-
-    parallax.style.transform = "translateY(" + scrollPosition * 0.1 + "px)";
-  });
-};
 
 navSlide();
