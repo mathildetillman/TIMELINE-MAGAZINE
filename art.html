@@ -6,38 +6,13 @@
     <title>Timeline Mag</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/Logo.svg" />
-    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link id="articlestyle" rel="stylesheet" href="./styles/1500.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="articles.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="Logo">
-          <a href="index.html" style="cursor: pointer"
-            ><img src="images/Logo.svg" alt="#"
-          /></a>
-        </div>
-        <nav>
-          <ul class="nav-links">
-            <li>
-              <a href="issues.html">issues</a>
-            </li>
-            <li>
-              <a href="documentation.html">documentation</a>
-            </li>
-            <li>
-              <a href="about.html">about</a>
-            </li>
-            <li>
-              <a href="disclaimer.html">disclaimer</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </header>
+      <div id="header"></div>
       <div class="change-style">
         <button class="style-button" onclick="changeStyle('./styles/1500.css')">
           1500
@@ -45,37 +20,12 @@
         <button class="style-button" onclick="changeStyle('./styles/2000.css')">
           2000
         </button>
+        <button class="style-button" onclick="changeArticle()">
+          Change article
+        </button>
       </div>
-      <section class="content">
-        <!-- <include
-          src="./articles/American Icon.html"
-        ></include> -->
-
-        <!-- <include
-          src="./articles/Edo Period in 10 Words and 4 Schools of Painting.html"
-        ></include> -->
-
-        <include
-          src="./articles/Whistler vs Ruskin How to Fling a Pot of Paint and Win a Trial.html"
-        ></include>
-      </section>
-
-      <footer class="footer" style="padding: 1rem; margin-top: 2rem">
-        <div class="footer-content">
-          <img style="width: 250px" src="images/Logo.svg" />
-
-          <p class="adress">
-            Informaation modelling and web technologies<br /><br />University of
-            Bologna
-          </p>
-
-          <p class="contact-info">
-            William Østensen<br /><br />
-            Jacopo Bettega<br /><br />
-            Mathilde Tillman Hegdal
-          </p>
-        </div>
-      </footer>
+      <section id="currentArticle"></section>
+      <div id="footer"></div>
     </div>
     <script src="script.js"></script>
   </body>
