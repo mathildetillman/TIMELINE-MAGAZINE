@@ -371,8 +371,32 @@ a:active {
   width: clamp(700px, 50%, 70%);
 }
 
+/* Change style bar */
+
+.change-style {
+  display: flex;
+  flex-direction: row;
+}
+
+.style {
+  font-family: Helvetica-Neue, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f7f7f7;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 20px;
+}
+
 .style-button {
   background-color: #070707;
   color: white;
   cursor: pointer;
+  padding: 10px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

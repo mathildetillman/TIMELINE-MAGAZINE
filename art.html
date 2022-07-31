@@ -13,16 +13,20 @@
   <body>
     <div class="wrapper">
       <div id="header"></div>
+      <!-- Change Style -->
       <div class="change-style">
+        <p class="style">Style:</p>
         <button class="style-button" onclick="changeStyle('./styles/1500.css')">
           1500
         </button>
         <button class="style-button" onclick="changeStyle('./styles/2000.css')">
           2000
         </button>
-        <button class="style-button" onclick="changeArticle()">
-          Change article
-        </button>
+      </div>
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="style-button" onclick="changeArticle(-1)">&larr;</button>
+        <button class="style-button" onclick="changeArticle(1)">&rarr;</button>
       </div>
       <section id="currentArticle"></section>
       <div id="footer"></div>

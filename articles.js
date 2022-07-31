@@ -15,8 +15,14 @@ const changeStyle = (sheet) => {
   $("#articlestyle").attr("href", sheet);
 };
 
-const changeArticle = () => {
-  currentArticleIndex = (currentArticleIndex + 1) % ART_ARTICLES.length;
+const changeArticle = (change) => {
+  currentArticleIndex = currentArticleIndex + change;
+  if (currentArticleIndex < 0) {
+    currentArticleIndex = ART_ARTICLES.length - 1;
+  } else {
+    currentArticleIndex = currentArticleIndex % ART_ARTICLES.length;
+  }
+  console.log(currentArticleIndex);
   $("#currentArticle").load(ART_ARTICLES[currentArticleIndex]);
   changeStyle(currentStyle);
 };
