@@ -17,11 +17,11 @@ html {
   column-count: 3;
 }
 
-img {
+.articleContainer img {
   width: 20vw;
 }
 
-figure {
+.articleContainer figure {
   margin: 1.6em 0;
   display: flex;
   flex-direction: column;
@@ -29,18 +29,18 @@ figure {
   align-items: center;
 }
 
-figcaption {
+.articleContainer figcaption {
   font-size: 0.625em;
 }
 
-h1,
+.articleContainer h1,
 h2 {
   font-family: franklin-gothic-atf, sans-serif;
   font-style: normal;
   font-weight: 600;
 }
 
-h1 {
+.articleContainer h1 {
   color: #f2fd40;
   font-size: 7em;
   line-height: 1em;
@@ -49,18 +49,12 @@ h1 {
   text-align-last: justify;
 }
 
-h2 {
-}
-
-p {
-}
-
-.info > p {
+.articleContainer .info > p {
   text-align: center;
   text-align-last: center;
 }
 
-q {
+.articleContainer q {
   font-style: italic;
   font-weight: 700;
   font-size: 1.2em;

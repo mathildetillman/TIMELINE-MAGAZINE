@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timeline Mag</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/images/Logo.svg">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/Logo.svg" />
+    <script src="https://unpkg.com/htmlincludejs"></script>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <div class="Logo">
-          <a href="index.html" style="cursor:pointer;"><img src="images/Logo.svg"alt="#"></a>
+          <a href="index.html" style="cursor: pointer"
+            ><img src="images/Logo.svg" alt="#"
+          /></a>
         </div>
         <nav>
           <ul class="nav-links">
@@ -35,31 +38,45 @@
           <div class="line3"></div>
         </div>
       </header>
+      <div class="change-style">
+        <button class="style-button" onclick="changeStyle('./styles/1500.css')">
+          1500
+        </button>
+        <button class="style-button" onclick="changeStyle('./styles/2000.css')">
+          2000
+        </button>
+      </div>
       <section class="content">
-        <h1>ART</h1>
-    </section>
+        <!-- <include
+          src="./articles/American Icon.html"
+        ></include> -->
 
-    <footer class="footer" style="padding: 1rem; margin-top: 2rem;">
+        <!-- <include
+          src="./articles/Edo Period in 10 Words and 4 Schools of Painting.html"
+        ></include> -->
+
+        <include
+          src="./articles/Whistler vs Ruskin How to Fling a Pot of Paint and Win a Trial.html"
+        ></include>
+      </section>
+
+      <footer class="footer" style="padding: 1rem; margin-top: 2rem">
         <div class="footer-content">
-          <img style="width: 250px;" src="images/Logo.svg" />
-         
-            <p class="adress">
-                    Informaation modelling and web technologies<br/><br/>University of Bologna
-            </p>
-            
-            <p class="contact-info">
-                William Østensen<br/><br/>
-                Jacopo Bettega<br/><br/>
-                Mathilde Tillman Hegdal
-            </p>
-        </div>
-    </footer>
-   
-     
+          <img style="width: 250px" src="images/Logo.svg" />
 
+          <p class="adress">
+            Informaation modelling and web technologies<br /><br />University of
+            Bologna
+          </p>
+
+          <p class="contact-info">
+            William Østensen<br /><br />
+            Jacopo Bettega<br /><br />
+            Mathilde Tillman Hegdal
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="script.js"></script>
-    </body>
-
-  
+  </body>
 </html>

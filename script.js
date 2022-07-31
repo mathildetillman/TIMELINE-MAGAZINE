@@ -20,3 +20,8 @@ const navSlide = () => {
 };
 
 navSlide();
+
+const changeStyle = (sheet) => {
+  console.log(sheet);
+  document.getElementById("pagestyle").setAttribute("href", sheet);
+};
