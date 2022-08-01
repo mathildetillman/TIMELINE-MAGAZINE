@@ -443,6 +443,10 @@ a:active {
 .content p {
   color: black;
   padding: 10px 10px 10px 30px;
+}
+
+.content span {
+  color: #55f;
   cursor: pointer;
 }
 

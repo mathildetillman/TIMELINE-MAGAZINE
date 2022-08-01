@@ -34,7 +34,15 @@ $(document).ready(function () {
     for (let i = 0; i < metadata.length; i++) {
       let el = metadata[i];
       let newElement = $(
-        "<p>" + el.dataLabel + " (" + el.count + ") " + "</p>"
+        '<p> <span onclick="findMention(`' +
+          el.dataLabel +
+          '`)" >' +
+          el.dataLabel +
+          "</span>" +
+          " (" +
+          el.count +
+          ") " +
+          "</p>"
       );
       $("#person").append(newElement);
     }
@@ -42,6 +50,10 @@ $(document).ready(function () {
 
   $("#footer").load("footer.html");
 });
+
+const findMention = (mention) => {
+  console.log(mention);
+};
 
 const changeStyle = (sheet) => {
   currentStyle = sheet;
