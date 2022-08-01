@@ -1,6 +1,7 @@
 let currentStyle = "./styles/1500.css";
 let currentIssue = "art";
 let currentArticleIndex = 0;
+let activeMentions = null;
 
 const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
 
@@ -52,7 +53,14 @@ $(document).ready(function () {
 });
 
 const findMention = (mention) => {
-  console.log(mention);
+  // Turn off old highlight
+  if (activeMentions) {
+    activeMentions.css("background-color", "transparent");
+  }
+
+  // Highlight newly clicked mention
+  activeMentions = $(`[data-label="${mention}"]`);
+  activeMentions.css("background-color", "yellow");
 };
 
 const changeStyle = (sheet) => {
