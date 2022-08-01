@@ -445,12 +445,17 @@ a:active {
   padding: 10px 10px 10px 30px;
 }
 
-.content span {
+.content a {
   color: #55f;
   cursor: pointer;
+  font-size: 1em;
 }
 
 #currentArticle {
   height: 100vh;
   overflow-y: scroll;
+}
+
+html {
+  scroll-behavior: smooth;
 }

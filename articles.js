@@ -35,11 +35,11 @@ $(document).ready(function () {
     for (let i = 0; i < metadata.length; i++) {
       let el = metadata[i];
       let newElement = $(
-        '<p> <span onclick="findMention(`' +
-          el.dataLabel +
+        '<p> <a onclick="findMention(`' +
+          el.about +
           '`)" >' +
           el.dataLabel +
-          "</span>" +
+          "</a>" +
           " (" +
           el.count +
           ") " +
@@ -52,6 +52,8 @@ $(document).ready(function () {
   $("#footer").load("footer.html");
 });
 
+// Id needs to be the same as about in metadata
+// Scrolls to the first instance of the mention in the text - only the first needs id
 const findMention = (mention) => {
   // Turn off old highlight
   if (activeMentions) {
@@ -59,8 +61,11 @@ const findMention = (mention) => {
   }
 
   // Highlight newly clicked mention
-  activeMentions = $(`[data-label="${mention}"]`);
+  activeMentions = $(`[about="${mention}"]`);
   activeMentions.css("background-color", "yellow");
+
+  // Scroll to newly clicked mention
+  $("#currentArticle").scrollTo(`#${mention}`, { duration: 1000 });
 };
 
 const changeStyle = (sheet) => {
