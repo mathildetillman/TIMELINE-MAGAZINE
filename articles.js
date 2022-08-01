@@ -34,7 +34,9 @@ const loadMetadataviewer = () => {
   for (let i = 0; i < metadata.length; i++) {
     let el = metadata[i];
     let newElement = $(
-      '<p> <a onclick="findMention(`' +
+      "<p> <a id=" +
+        el.about +
+        ' onclick="findMention(`' +
         el.about +
         '`)" >' +
         el.dataLabel +
@@ -45,6 +47,16 @@ const loadMetadataviewer = () => {
         "</p>"
     );
     $("#person").append(newElement);
+
+    // Add tooltip to each element that allows search in wikipedia
+    tippy(`#${el.about}`, {
+      interactive: true,
+      content:
+        "<a class='tooltip' href='https://en.wikipedia.org/wiki/" +
+        el.dataLabel.split(" ").join("_") +
+        "' target='blank'>Search in Wikipedia</a>",
+      allowHTML: true,
+    });
   }
 };
 

@@ -451,6 +451,10 @@ a:active {
   font-size: 1em;
 }
 
+.tooltip {
+  color: white;
+}
+
 #currentArticle {
   height: 100vh;
   overflow-y: scroll;
