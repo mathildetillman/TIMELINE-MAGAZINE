@@ -35,6 +35,7 @@ const loadMetadataviewer = () => {
     let el = metadata[i];
     let newElement = $(
       "<p> <a id=" +
+        "button" +
         el.about +
         ' onclick="findMention(`' +
         el.about +
@@ -49,7 +50,7 @@ const loadMetadataviewer = () => {
     $("#person").append(newElement);
 
     // Add tooltip to each element that allows search in wikipedia
-    tippy(`#${el.about}`, {
+    tippy(`#button${el.about}`, {
       interactive: true,
       content:
         "<a class='tooltip' href='https://en.wikipedia.org/wiki/" +
