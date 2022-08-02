@@ -5,59 +5,67 @@ let activeMentions = null;
 
 const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
 
+const METADATA = ["person", "place", "event", "content"];
+
 const loadMetadataviewer = () => {
   $(".content").empty(); // Remove old metadata
 
-  let persons = document.getElementsByClassName("mention person");
-  let metadata = [];
+  // TODO Fix naming under (e.g. persons)
+  for (let i = 0; i < METADATA.length; i++) {
+    const className = `mention ${METADATA[i]}`;
+    console.log(className);
+    let persons = document.getElementsByClassName(className);
+    console.log(persons);
+    let metadata = [];
 
-  for (let person of persons) {
-    let personElement = {
-      about: person.getAttribute("about"),
-      dataLabel: person.getAttribute("data-label"),
-      count: 1,
-    };
+    for (let person of persons) {
+      let personElement = {
+        about: person.getAttribute("about"),
+        dataLabel: person.getAttribute("data-label"),
+        count: 1,
+      };
 
-    // Check if person already in list
-    let index = metadata.findIndex(
-      (object) => object.dataLabel === personElement.dataLabel
-    );
+      // Check if person already in list
+      let index = metadata.findIndex(
+        (object) => object.dataLabel === personElement.dataLabel
+      );
 
-    if (index !== -1) {
-      metadata[index].count++;
-    } else {
-      metadata.push(personElement);
+      if (index !== -1) {
+        metadata[index].count++;
+      } else {
+        metadata.push(personElement);
+      }
     }
-  }
 
-  // Add elements to metadataviewer
-  for (let i = 0; i < metadata.length; i++) {
-    let el = metadata[i];
-    let newElement = $(
-      "<p> <a id=" +
-        "button" +
-        el.about +
-        ' onclick="findMention(`' +
-        el.about +
-        '`)" >' +
-        el.dataLabel +
-        "</a>" +
-        " (" +
-        el.count +
-        ") " +
-        "</p>"
-    );
-    $("#person").append(newElement);
+    // Add elements to metadataviewer
+    for (let i = 0; i < metadata.length; i++) {
+      let el = metadata[i];
+      let newElement = $(
+        "<p> <a id=" +
+          "button" +
+          el.about +
+          ' onclick="findMention(`' +
+          el.about +
+          '`)" >' +
+          el.dataLabel +
+          "</a>" +
+          " (" +
+          el.count +
+          ") " +
+          "</p>"
+      );
+      $("#person").append(newElement);
 
-    // Add tooltip to each element that allows search in wikipedia
-    tippy(`#button${el.about}`, {
-      interactive: true,
-      content:
-        "<a class='tooltip' href='https://en.wikipedia.org/wiki/" +
-        el.dataLabel.split(" ").join("_") +
-        "' target='blank'>Search in Wikipedia</a>",
-      allowHTML: true,
-    });
+      // Add tooltip to each element that allows search in wikipedia
+      tippy(`#button${el.about}`, {
+        interactive: true,
+        content:
+          "<a class='tooltip' href='https://en.wikipedia.org/wiki/" +
+          el.dataLabel.split(" ").join("_") +
+          "' target='blank'>Search in Wikipedia</a>",
+        allowHTML: true,
+      });
+    }
   }
 };
 
