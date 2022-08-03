@@ -371,7 +371,14 @@ a:active {
   width: clamp(700px, 50%, 70%);
 }
 
-/* Change style bar */
+/* Sub header */
+
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
 
 .change-style {
   display: flex;
@@ -385,7 +392,7 @@ a:active {
   color: #f7f7f7;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 10px 20px;
+  padding: 22px 20px 10px 0;
 }
 
 .style-button {
@@ -395,10 +402,15 @@ a:active {
   padding: 10px;
 }
 
+.active-style {
+  text-decoration: underline;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 10px;
 }
 
 /* Main content articles */

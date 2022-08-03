@@ -2,6 +2,7 @@ let currentStyle = "./styles/1500.css";
 let currentIssue = "art";
 let currentArticleIndex = 0;
 let activeMentions = null;
+let activeStyle = "1500";
 
 const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
 const METADATA = ["person", "place", "event", "content"];
@@ -107,9 +108,16 @@ const findMention = (mention) => {
 };
 
 //* Set new article style
-const changeStyle = (sheet) => {
-  currentStyle = sheet;
-  $("#articlestyle").attr("href", sheet);
+const changeStyle = (style) => {
+  // Set new stylesheet
+  const path = "./styles/" + style + ".css";
+  currentStyle = path;
+  $("#articlestyle").attr("href", path);
+
+  // Toggle underline for active styles
+  $(`#button-${activeStyle}`).toggleClass("active-style");
+  $(`#button-${style}`).toggleClass("active-style");
+  activeStyle = style;
 };
 
 //* Pagination for articles
