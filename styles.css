@@ -371,7 +371,14 @@ a:active {
   width: clamp(700px, 50%, 70%);
 }
 
-/* Change style bar */
+/* Sub header */
+
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
 
 .change-style {
   display: flex;
@@ -385,7 +392,7 @@ a:active {
   color: #f7f7f7;
   text-decoration: none;
   text-transform: capitalize;
-  padding: 10px 20px;
+  padding: 22px 20px 10px 0;
 }
 
 .style-button {
@@ -395,8 +402,87 @@ a:active {
   padding: 10px;
 }
 
+.active-style {
+  text-decoration: underline;
+}
+
 .pagination {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 10px;
+}
+
+/* Main content articles */
+
+#main-content {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#metadataviewer {
+  height: 100vh;
+  width: 20vw;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+#info-box {
+  margin: 1em;
+  padding: 1em;
+  background-color: #f1f1f1;
+}
+
+#info-box p {
+  color: black;
+  line-height: 2em;
+}
+
+.collapsible {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 1.5em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.content p {
+  color: black;
+  padding: 10px 10px 10px 30px;
+}
+
+.content a {
+  color: #55f;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.tooltip {
+  color: white;
+}
+
+#currentArticle {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+html {
+  scroll-behavior: smooth;
 }
