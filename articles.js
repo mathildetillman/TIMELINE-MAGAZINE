@@ -4,7 +4,7 @@ let activeMentions = null;
 let activeStyle = "1500";
 
 const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
-const METADATA = ["person", "place", "event", "content"];
+const METADATA = ["person", "place", "event", "concept"];
 
 // * Get metadata from articles and insert into metadataviewer
 const loadMetadataviewer = () => {
