@@ -4,42 +4,41 @@ let currentArticleIndex = 0;
 let activeMentions = null;
 
 const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
-
 const METADATA = ["person", "place", "event", "content"];
 
+// * Get metadata from articles and insert into metadataviewer
 const loadMetadataviewer = () => {
   $(".content").empty(); // Remove old metadata
 
-  // TODO Fix naming under (e.g. persons)
+  // For all categories of metadata
   for (let i = 0; i < METADATA.length; i++) {
     const className = `mention ${METADATA[i]}`;
-    console.log(className);
-    let persons = document.getElementsByClassName(className);
-    console.log(persons);
+    let mentions = document.getElementsByClassName(className);
     let metadata = [];
 
-    for (let person of persons) {
-      let personElement = {
-        about: person.getAttribute("about"),
-        dataLabel: person.getAttribute("data-label"),
+    // Create list of mention objects for each metadata category
+    for (let mention of mentions) {
+      let element = {
+        about: mention.getAttribute("about"),
+        dataLabel: mention.getAttribute("data-label"),
         count: 1,
       };
 
-      // Check if person already in list
+      // Check if element already in list
       let index = metadata.findIndex(
-        (object) => object.dataLabel === personElement.dataLabel
+        (object) => object.dataLabel === element.dataLabel
       );
 
       if (index !== -1) {
         metadata[index].count++;
       } else {
-        metadata.push(personElement);
+        metadata.push(element);
       }
     }
 
-    // Add elements to metadataviewer
-    for (let i = 0; i < metadata.length; i++) {
-      let el = metadata[i];
+    // Add elements in list to the metadataviewer
+    for (let j = 0; j < metadata.length; j++) {
+      let el = metadata[j];
       let newElement = $(
         "<p> <a id=" +
           "button" +
@@ -54,7 +53,7 @@ const loadMetadataviewer = () => {
           ") " +
           "</p>"
       );
-      $("#person").append(newElement);
+      $(`#${METADATA[i]}`).append(newElement);
 
       // Add tooltip to each element that allows search in wikipedia
       tippy(`#button${el.about}`, {
@@ -69,17 +68,17 @@ const loadMetadataviewer = () => {
   }
 };
 
+// * Load all components
 $(document).ready(function () {
   $("#header").load("header.html");
   $("#currentArticle").load(ART_ARTICLES[currentArticleIndex], () => {
     loadMetadataviewer();
   });
-
   $("#footer").load("footer.html");
 });
 
-// 'Id' needs to be the same as 'about' in metadata
-// Scrolls to the first instance of the mention in the text - only the first mention needs id
+// * Scroll to the first instance of the mention in the text based on 'id'
+// 'Id' needs to be the same as 'about' in markup, only the first mention needs 'id'
 const findMention = (mention) => {
   // Turn off old highlight
   if (activeMentions) {
@@ -94,11 +93,13 @@ const findMention = (mention) => {
   $("#currentArticle").scrollTo(`#${mention}`, { duration: 1000 });
 };
 
+//* Set new article style
 const changeStyle = (sheet) => {
   currentStyle = sheet;
   $("#articlestyle").attr("href", sheet);
 };
 
+//* Pagination for articles
 const changeArticle = (change) => {
   currentArticleIndex = currentArticleIndex + change;
   if (currentArticleIndex < 0) {
