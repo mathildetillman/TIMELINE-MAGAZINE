@@ -8,7 +8,20 @@ const METADATA = ["person", "place", "event", "content"];
 
 // * Get metadata from articles and insert into metadataviewer
 const loadMetadataviewer = () => {
-  $(".content").empty(); // Remove old metadata
+  // Remove old metadata
+  $("#info-box").empty();
+  $(".content").empty();
+
+  // Infobox
+  const title = document.querySelector('meta[name="title"]').content;
+  const author = document.querySelector('meta[name="author"]').content;
+  const published = document.querySelector('meta[name="published"]').content;
+  const subject = document.querySelector('meta[name="subject"]').content;
+
+  $(`#info-box`).append(`<p> <b>Title: </b> ${title}</p>`);
+  $(`#info-box`).append(`<p> <b>Author: </b> ${author}</p>`);
+  $(`#info-box`).append(`<p> <b>Publishing date: </b> ${published}</p>`);
+  $(`#info-box`).append(`<p> <b>Subject: </b> ${subject}</p>`);
 
   // For all categories of metadata
   for (let i = 0; i < METADATA.length; i++) {
