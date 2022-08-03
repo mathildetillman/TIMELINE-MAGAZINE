@@ -1,4 +1,3 @@
-let currentStyle = "./styles/1500.css";
 let currentIssue = "art";
 let currentArticleIndex = 0;
 let activeMentions = null;
@@ -111,7 +110,6 @@ const findMention = (mention) => {
 const changeStyle = (style) => {
   // Set new stylesheet
   const path = "./styles/" + style + ".css";
-  currentStyle = path;
   $("#articlestyle").attr("href", path);
 
   // Toggle underline for active styles
@@ -131,5 +129,5 @@ const changeArticle = (change) => {
   $("#currentArticle").load(ART_ARTICLES[currentArticleIndex], () => {
     loadMetadataviewer();
   });
-  changeStyle(currentStyle);
+  changeStyle(activeStyle);
 };
