@@ -1,10 +1,14 @@
+const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
+const FILM_ARTICLES = ["1.html", "2.html", "3.html"]; // TODO: ADD THE NAMES OF YOUR ARTICLES
+const MUSIC_ARTICLES = ["1.html", "2.html", "3.html"]; // TODO: ADD THE NAMES OF YOUR ARTICLES
+
+const METADATA = ["person", "place", "event", "concept"];
+
 let currentIssue = "art";
+let currentArticles = ART_ARTICLES;
 let currentArticleIndex = 0;
 let activeMentions = null;
 let activeStyle = "1500";
-
-const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
-const METADATA = ["person", "place", "event", "concept"];
 
 // * Get metadata from articles and insert into metadataviewer
 const loadMetadataviewer = () => {
@@ -84,7 +88,24 @@ const loadMetadataviewer = () => {
 // * Load all components
 $(document).ready(function () {
   $("#header").load("header.html");
-  $("#currentArticle").load(ART_ARTICLES[currentArticleIndex], () => {
+
+  // Display correct articles for each issue
+  currentIssue = document.querySelector('meta[name="issue"]').content;
+  switch (currentIssue) {
+    case "art":
+      currentArticles = ART_ARTICLES;
+      break;
+    case "film":
+      currentArticles = FILM_ARTICLES;
+      break;
+    case "music":
+      currentArticles = MUSIC_ARTICLES;
+      break;
+    default:
+      currentArticles = ART_ARTICLES;
+  }
+
+  $("#currentArticle").load(currentArticles[currentArticleIndex], () => {
     loadMetadataviewer();
   });
   $("#footer").load("footer.html");
@@ -122,11 +143,11 @@ const changeStyle = (style) => {
 const changeArticle = (change) => {
   currentArticleIndex = currentArticleIndex + change;
   if (currentArticleIndex < 0) {
-    currentArticleIndex = ART_ARTICLES.length - 1;
+    currentArticleIndex = currentArticles.length - 1;
   } else {
-    currentArticleIndex = currentArticleIndex % ART_ARTICLES.length;
+    currentArticleIndex = currentArticleIndex % currentArticles.length;
   }
-  $("#currentArticle").load(ART_ARTICLES[currentArticleIndex], () => {
+  $("#currentArticle").load(currentArticles[currentArticleIndex], () => {
     loadMetadataviewer();
   });
   changeStyle(activeStyle);
