@@ -1,6 +1,10 @@
 const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
-const FILM_ARTICLES = ["1.html", "2.html", "3.html"]; // TODO: ADD THE NAMES OF YOUR ARTICLES
-const MUSIC_ARTICLES = ["1.html", "2.html", "3.html"]; // TODO: ADD THE NAMES OF YOUR ARTICLES
+const FILM_ARTICLES = [
+  "Amyl_and_the_sniffers.html",
+  "Whistler.html",
+  "Edo.html",
+]; // TODO: ADD THE NAMES OF YOUR ARTICLES
+const MUSIC_ARTICLES = ["Kasabian.html", "Wet_leg.html", "Rex.html"];
 
 const METADATA = ["person", "place", "event", "concept"];
 
@@ -21,11 +25,13 @@ const loadMetadataviewer = () => {
   const author = document.querySelector('meta[name="author"]').content;
   const published = document.querySelector('meta[name="published"]').content;
   const subject = document.querySelector('meta[name="subject"]').content;
+  const from = document.querySelector('meta[name="from"]').content;
 
   $(`#info-box`).append(`<p> <b>Title: </b> ${title}</p>`);
   $(`#info-box`).append(`<p> <b>Author: </b> ${author}</p>`);
   $(`#info-box`).append(`<p> <b>Publishing date: </b> ${published}</p>`);
   $(`#info-box`).append(`<p> <b>Subject: </b> ${subject}</p>`);
+  $(`#info-box`).append(`<p> <b>From Article: </b> ${from}</p>`);
 
   // For all categories of metadata
   for (let i = 0; i < METADATA.length; i++) {
@@ -88,7 +94,6 @@ const loadMetadataviewer = () => {
 // * Load all components
 $(document).ready(function () {
   $("#header").load("header.html");
-
   // Display correct articles for each issue
   currentIssue = document.querySelector('meta[name="issue"]').content;
   switch (currentIssue) {
@@ -105,9 +110,12 @@ $(document).ready(function () {
       currentArticles = ART_ARTICLES;
   }
 
-  $("#currentArticle").load(currentArticles[currentArticleIndex], () => {
-    loadMetadataviewer();
-  });
+  $("#currentArticle").load(
+    "articles/" + currentIssue + "/" + currentArticles[currentArticleIndex],
+    () => {
+      loadMetadataviewer();
+    }
+  );
   $("#footer").load("footer.html");
 });
 
@@ -142,13 +150,17 @@ const changeStyle = (style) => {
 //* Pagination for articles
 const changeArticle = (change) => {
   currentArticleIndex = currentArticleIndex + change;
+  currentIssue = document.querySelector('meta[name="issue"]').content;
   if (currentArticleIndex < 0) {
     currentArticleIndex = currentArticles.length - 1;
   } else {
     currentArticleIndex = currentArticleIndex % currentArticles.length;
   }
-  $("#currentArticle").load(currentArticles[currentArticleIndex], () => {
-    loadMetadataviewer();
-  });
+  $("#currentArticle").load(
+    "articles/" + currentIssue + "/" + currentArticles[currentArticleIndex],
+    () => {
+      loadMetadataviewer();
+    }
+  );
   changeStyle(activeStyle);
 };

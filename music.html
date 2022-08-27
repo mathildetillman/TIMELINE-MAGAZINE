@@ -3,63 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="issue" content="music" />
     <title>Timeline Mag</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/images/Logo.svg">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/Logo.svg" />
+    <link id="articlestyle" rel="stylesheet" href="./styles/1500.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="Logo">
-          <a href="index.html" style="cursor:pointer;"><img src="images/Logo.svg"alt="#"></a>
+      <div id="header"></div>
+      <div class="sub-header">
+        <!-- Change Style -->
+        <div class="change-style">
+          <p class="style">Style:</p>
+          <button
+            id="button-1500"
+            class="style-button active-style"
+            onclick="changeStyle('1500')"
+          >
+            1500
+          </button>
+          <button
+            id="button-2000"
+            class="style-button"
+            onclick="changeStyle('2000')"
+          >
+            2000
+          </button>
+          <button id="button-1900" class="style-button" onclick="changeStyle('early_1900')">
+            Early 20th
+          </button>
+          <button id="button-2030" class="style-button" onclick="changeStyle('2030')">
+            2030
+          </button>
         </div>
-        <nav>
-          <ul class="nav-links">
-            <li>
-              <a href="issues.html">issues</a>
-            </li>
-            <li>
-              <a href="documentation.html">documentation</a>
-            </li>
-            <li>
-              <a href="about.html">about</a>
-            </li>
-            <li>
-              <a href="disclaimer.html">disclaimer</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="style-button" onclick="changeArticle(-1)">
+            &larr;
+          </button>
+          <button class="style-button" onclick="changeArticle(1)">
+            &rarr;
+          </button>
         </div>
-      </header>
-    <section class="content">
-        <h1>MUSIC</h1>
-    </section>
-
-    <footer class="footer" style="padding: 1rem; margin-top: 2rem;">
-        <div class="footer-content">
-          <img style="width: 250px;" src="images/Logo.svg" />
-         
-            <p class="adress">
-                    Informaation modelling and web technologies<br/><br/>University of Bologna
-            </p>
-            
-            <p class="contact-info">
-                William Østensen<br/><br/>
-                Jacopo Bettega<br/><br/>
-                Mathilde Tillman Hegdal
-            </p>
+      </div>
+      <!-- Main content -->
+      <div id="main-content">
+        <div id="metadataviewer">
+          <!-- <h3>Metadata</h3> -->
+          <div id="info-box"></div>
+          <button type="button" class="collapsible">People</button>
+          <div class="content" id="person"></div>
+          <button type="button" class="collapsible">Places</button>
+          <div class="content" id="place"></div>
+          <button type="button" class="collapsible">Events</button>
+          <div class="content" id="event"></div>
+          <button type="button" class="collapsible">Concepts</button>
+          <div class="content" id="concept"></div>
         </div>
-    </footer>
-   
-     
-
+        <section id="currentArticle"></section>
+      </div>
+      <!-- Footer -->
+      <div id="footer"></div>
     </div>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="articles.js"></script>
     <script src="script.js"></script>
-    </body>
-
-  
+  </body>
 </html>

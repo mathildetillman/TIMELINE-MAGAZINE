@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Righteous&display=swap');
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  box-sizing: border-box;
+ 
+}
+
+h1,h2,h3,h4,p {
+    font-family: 'Righteous', cursive;
+    text-transform: capitalize;
+    color: #111111;
+    line-height: 1em;
+    position: relative;
+    z-index: 1;
+    
+}
+h1 {
+   font-size: 48px;
+    margin-bottom: 5vh;
+}
+#info-box p {
+    font-family: Helvetica-Neue, Helvetica, sans-serif;
+}
+
+
+.info {
+    padding: 20px 0;
+position: relative;
+}
+.info p:last-of-type{
+    margin-top: 5vh;
+}
+.info::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    border-top: 5px solid #111111;
+  }
+
+
+.articleContainer {
+    padding: 5vw;
+    position: relative;
+    background-color: #dad8ca;
+}
+.articleContainer::after {
+    content: " ";
+    height: 100%;
+    width: 80px;
+    position: absolute;
+    z-index: 0;
+    opacity: 1;
+    top: 0;
+    right: 20%;
+    background-color: rgb(235,89,36);
+}
+.articleContainer h1, .contentContainer> p {
+    font-family: 'Righteous', cursive;
+    text-transform: capitalize;
+    color: #111111;
+    line-height: 1em;;
+   
+}
+.contentContainer {
+    position: relative;   
+    margin-top: 5vh; 
+    position: relative;
+
+    z-index: 1;
+}
+
+.info::after {
+  content: " ";
+  position: absolute;
+  left: 50%; 
+  transform: translate(-50%, 0);
+  background: rgb(230,29,42);;
+  width: 100vh;
+  height: 100vh;
+  border: 40px solid #FFBA10;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.contentContainer {
+    column-count: 2;
+}
+.articleContainer img {
+    width: 30vw;
+  }
+  
+  .articleContainer figure {
+    margin: 1.6em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .articleContainer figcaption {
+    font-size: 0.625em;
+  }
+
+.hero_image {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+   
+}
+.hero_image img {
+    width: 100%;
+    height: 500px;    
+    border-radius: 100%;
+    z-index: -1;
+}
+  
+figure img {
+    filter: saturate(10) brightness(0.5);
+}
+figcaption {
+    font-size: 0.625em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+
+
+blockquote {
+    margin: 1em;
+    padding: 2em 1em;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    color: rgb(42,10,230);
+    border-top: 5px solid rgb(42,10,230);
+    border-bottom: 5px solid rgb(42,10,230);
+}
