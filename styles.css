@@ -400,6 +400,10 @@ a:active {
   color: white;
   cursor: pointer;
   padding: 10px;
+  border: none;
+}
+.style-button:hover {
+  text-decoration: underline;
 }
 
 .active-style {

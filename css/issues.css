@@ -52,6 +52,9 @@ a, li {
     overflow-wrap: break-word;
     margin:0;
 }
+
+
+
 .issues-nav-text {
     padding-left: .5rem;
 }
@@ -61,6 +64,18 @@ a, li {
     width: 50%;
     overflow: hidden;
     overscroll-behavior: none;
+}
+
+@media screen and (max-width: 768px) {
+    .issues-container {
+        flex-direction: column;
+    }
+    .issues-headline {
+        overflow-wrap:normal;
+    }
+    .issues-text-container, .issues-gallery {
+        width: 100%;
+    }
 }
 
 .issues-item {
