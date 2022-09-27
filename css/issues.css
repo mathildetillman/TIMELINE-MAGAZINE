@@ -30,7 +30,7 @@ a, li {
 
 .issues-container {
     padding: 0 1rem;
-    height: calc(300vh - 10vh); 
+    
     display: flex;
     overscroll-behavior: none;
 }
