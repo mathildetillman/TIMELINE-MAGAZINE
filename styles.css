@@ -70,7 +70,7 @@ p {
   color: #f7f7f7;
   margin-top: 10px;
 }
-li,
+
 a,
 button {
   font-family: Helvetica-Neue, Helvetica, sans-serif;
@@ -80,6 +80,16 @@ button {
   text-decoration: none;
   text-transform: capitalize;
 }
+li
+ {
+  font-family: Helvetica-Neue, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #f7f7f7;
+  text-decoration: none;
+  
+}
+ }
 a:active {
   color: #070707;
   mix-blend-mode: difference;
