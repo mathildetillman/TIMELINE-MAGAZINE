@@ -12,11 +12,13 @@ html {
   font-family: franklin-gothic-atf, sans-serif;
 }
 
+
 .contentContainer {
   column-count: 3;
 }
 
 .articleContainer img {
+  text-justify: auto;
   width: 20vw;
 }
 
@@ -41,16 +43,17 @@ h2 {
 
 .articleContainer h1 {
   color: #f2fd40;
-  font-size: 7em;
+  font-size: 6em;
   line-height: 1em;
   text-transform: lowercase;
-  text-align: justify;
-  text-align-last: justify;
+  margin-bottom: 50px;
+
 }
 
 .articleContainer .info > p {
   text-align: center;
   text-align-last: center;
+  margin: 20px 0;
 }
 
 .articleContainer q, blockquote {
@@ -59,6 +62,7 @@ h2 {
   font-size: 1.2em;
   color: #f495cc;
   font-family: franklin-gothic-atf, sans-serif;
+  margin: 10px 0;
 }
 
 .quotePerson {
@@ -73,11 +77,6 @@ h2 {
 .quotePerson:before {
   content: "-";
   margin-right: 6px;
-}
-
-#headline {
-  text-transform: uppercase;
-  color: white
 }
 
 /* Cover */
