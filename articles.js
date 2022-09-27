@@ -17,7 +17,7 @@ let currentIssue = "art";
 let currentArticles = ART_ARTICLES;
 let currentArticleIndex = 0;
 let activeMentions = null;
-let activeStyle = "1500";
+let activeStyle = "2030";
 
 // * Get metadata from articles and insert into metadataviewer
 const loadMetadataviewer = () => {

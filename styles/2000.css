@@ -9,15 +9,16 @@ html {
 .articleContainer {
   padding: 100px;
   background-color: #006fb4;
-  line-height: 1.6em;
   font-family: franklin-gothic-atf, sans-serif;
 }
+
 
 .contentContainer {
   column-count: 3;
 }
 
 .articleContainer img {
+  text-justify: auto;
   width: 20vw;
 }
 
@@ -42,24 +43,26 @@ h2 {
 
 .articleContainer h1 {
   color: #f2fd40;
-  font-size: 7em;
+  font-size: 6em;
   line-height: 1em;
   text-transform: lowercase;
-  text-align: justify;
-  text-align-last: justify;
+  margin-bottom: 50px;
+
 }
 
 .articleContainer .info > p {
   text-align: center;
   text-align-last: center;
+  margin: 20px 0;
 }
 
-.articleContainer q {
+.articleContainer q, blockquote {
   font-style: italic;
   font-weight: 700;
   font-size: 1.2em;
   color: #f495cc;
   font-family: franklin-gothic-atf, sans-serif;
+  margin: 10px 0;
 }
 
 .quotePerson {
@@ -74,4 +77,62 @@ h2 {
 .quotePerson:before {
   content: "-";
   margin-right: 6px;
+}
+
+/* Cover */
+
+.coverContainer {
+  color: white;
+}
+
+.issue-name {
+  color: #f495cc;
+  text-transform: lowercase;
+  font-family: "Homemade apple", arial, serif;
+  margin-left: 30px;
+}
+
+.issue-name:after {
+  content: "!";
+  color: #f495cc;
+  font-family: "Homemade apple", arial, serif;
+}
+
+.headlinContainer {
+  margin-bottom: 100px;
+}
+
+.link-to-page {
+  margin-bottom: 50px;
+}
+
+.cover-link{
+  cursor: pointer;
+}
+
+
+#article-one {
+  text-transform: uppercase;
+  color: #f2fd40;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+#float-r {
+  float: right;
+  width: 300px;
+}
+
+#article-two {
+  text-transform: capitalize;
+  font-style: italic;
+  color: #f495cc;
+  font-weight: 700;
+}
+
+#article-three {
+  text-transform: uppercase;
+  color: #f2fd40;
+  font-weight: 900;
+  font-size: 2.5em;
 }
