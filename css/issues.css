@@ -46,13 +46,13 @@ a, li {
     margin: 0!important;
     position: sticky;
     top: 12vh;    
+    
 }
 .issues-headline h1{
     vertical-align: text-top;
     overflow-wrap: break-word;
     margin:0;
 }
-
 
 
 .issues-nav-text {
@@ -99,7 +99,7 @@ a, li {
 }
 
 .issue-image-container img {
-   width: 50%;
+   width: 30%;
 
 }
 .issue-image-container:hover img {

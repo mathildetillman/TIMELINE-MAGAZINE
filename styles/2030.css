@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Michroma&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Righteous&family=Space+Mono&family=UnifrakturMaguntia&display=swap');
 body,
 html {
   height: 100%;
@@ -10,87 +10,78 @@ html {
  
 }
 
-h1,h2,h3,h4,p {
+h1,h2,h3,h4, .articleContainer p{
+    font-family: 'Space Mono', monospace;
     color: #070707;
-    line-height: 1em;
+    line-height: .8em;
     position: relative;
     z-index: 1;
     
 }
+
 h1{
-   font-size: 8rem;
+    font-family:'UnifrakturMaguntia', cursive;
+    ;
+    font-size:8rem;
     margin-bottom: 5vh;
     text-transform: capitalize;
+    text-align: justify;
     position: relative;
+    letter-spacing: -6px;
     z-index: 1;
+    color:#5af6a3;
+    margin:-1rem;
+    padding: 2rem;
+    background-color: #074524;
 }
-
-h1:first-letter{
-    font-family: 'EB Garamond', serif;
-}
-
-h1::after {
-    content: " ";
-    position: absolute;
-    left: 50%;
-    top: 0%;
-    transform: translate(-50%, 0);
-    width: 50vw;
-    height: 50vw;
-    background-color: #d9ff00;
-  filter: blur(100px);
-  z-index: -1;
-  border-radius: 100%;
-}
-h2 {
-    font-family: 'EB Garamond', serif;
-    font-size: 96px;
+.link-to-page a{
+    font-size: 5rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    margin-bottom: 5vh;
     text-transform: uppercase;
-    font-weight:lighter;
+    line-height: 1em;
+    
 }
 
-p {
+
+
+
+.articleContainer p {
+    
     font-size: 24px;
     margin-bottom: 1rem;
+    width: 50%;
 }
 
-#info-box p {
-    font-family: Helvetica-Neue, Helvetica, sans-serif;
-    font-size: 16px;
-    margin-bottom: 0;
-}
+
+
 
 .info {
     padding: 20px 0;
 position: relative;
 
 }
-.info p:first-of-type {
-    font-family: 'EB Garamond', serif;
-    font-size: 32px;
+.info p {
+    font-size: 3rem;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: right;
 }
+
 .info p:last-of-type{
     margin-top: 5vh;
 }
 
-.articleContainer p:last-of-type{
-    font-family: 'EB Garamond', serif;
-    font-size: 32px;
-}
+
 
 
 
 
 .articleContainer {
-    padding: 5vw;
+    padding:1rem 1rem;
     position: relative;
-    background-color: #f7f7f7;
-background-image: linear-gradient(grey .5px, transparent .5px),
-linear-gradient(90deg, grey .5px, transparent .5px),
-linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    background-color: #FD5A23;
   }
 
 }
@@ -112,21 +103,21 @@ background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
 
-
 .articleContainer img {
     position: relative; /* make child elements move relative to this parent */
-    width: 100%;
+    width: 50%;
     object-fit: cover;
 }
 
 
   
   .articleContainer figure {
+    width: 100%;
     margin: 1.6em 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding: 2rem;
 
   }
@@ -156,19 +147,102 @@ figcaption {
 
   }
 
-
+  ::selection {
+    color: #5af6a3;;
+    background: #074524;
+  }
 
 blockquote {
-    margin: 1em 0;
-    padding: 1em 1em;
-    font-size: 24px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 1em 1rem;
+    padding: 1rem 1rem;
+    font-size: 6rem;
+    font-family:'UnifrakturMaguntia', cursive;
     font-weight: 600;
-    color: #070707;
-    text-transform: uppercase;
-    font-style: italic;
+    color: #5af6a3;
+    text-align: center;
+    margin: 1rem -1rem ;
+    
 }
  blockquote  {
-    background-image: url('../img/music/bg.png');
-    background-size: cover;
+    background-color: #a2a2a1;
  }
+
+ .coverContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-content: center;
+ }
+ .coverContainer  h1{
+    font-size: 10rem;
+    
+ }
+
+.coverContainer div:nth-of-type(1) {
+    width: 100%;
+    grid-column-start: 1 ;
+    grid-column-end: 3;
+    background-color: #074524;
+    display: flex;
+    grid-row-start: 1 ;
+    grid-row-end: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+ }
+ .coverContainer div:nth-of-type(2) {
+    width: 100%;
+    grid-column-start: 1 ;
+    grid-column-end: 2;
+    grid-row-start: 2 ;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items:  flex-start;
+    flex-direction: column;
+    padding: 1rem;
+    background-color:#EB3832;
+ }
+ .coverContainer div:nth-of-type(3) {
+    width: 100%;
+    grid-column-start: 2 ;
+    grid-column-end: 3;
+    grid-row-start: 2 ;
+    grid-row-end: 3;
+    background-color: #a2a2a1;
+    display: flex;
+    justify-content: flex-start;
+    align-items:  flex-start;
+    flex-direction: column;
+    padding: 2rem;
+ }
+ .coverContainer div:nth-of-type(4) {
+    width: 100%;
+    grid-column-start: 1 ;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #FD5A23;
+    text-align: center;
+ }
+ .coverContainer a{
+    color: #070707;
+ }
+ .link-to-page:hover a {
+  
+    color: #5af6a3;
+    font-family:'UnifrakturMaguntia', cursive;
+    transition: .2s ease-in;
+    text-transform: capitalize;
+ }
+ .cover {
+    padding: 0;
+ }
+ 

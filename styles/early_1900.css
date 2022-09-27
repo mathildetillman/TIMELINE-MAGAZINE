@@ -11,7 +11,7 @@ html {
  
 }
 
-h1,h2,h3,h4,p {
+h1,h2,h3,h4, .articleContainer p, .coverContainer a{
     font-family: 'Righteous', cursive;
     text-transform: capitalize;
     color: #111111;
@@ -43,6 +43,7 @@ position: relative;
     width: 100%;
     height: 30px;
     border-top: 5px solid #111111;
+    z-index: -1;
   }
 
 
@@ -143,4 +144,54 @@ blockquote {
     color: rgb(42,10,230);
     border-top: 5px solid rgb(42,10,230);
     border-bottom: 5px solid rgb(42,10,230);
+}
+.coverContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20vh;
+}
+.coverContainer .headlinContainer{
+    transform: rotate(-25deg);
+    padding: 2rem;
+    z-index: 1;
+ 
+}
+.coverContainer .headlinContainer h1 {
+    font-size: 10rem;
+    
+}
+
+.coverContainer a{
+    color: #070707;
+ }
+ .coverContainer a:hover {
+    text-decoration: underline;
+    text-decoration-color: crimson;
+ }
+.coverContainer .link-to-page:nth-of-type(even) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 30vh;
+    transform: rotate(-25deg);
+     z-index: 1;
+
+}
+.coverContainer .link-to-page:nth-of-type(odd) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 30vh;
+    transform: rotate(-25deg);
+     z-index: 1;
+
+}
+
+.cover-link {
+    width: 60%;
 }

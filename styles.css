@@ -57,7 +57,7 @@ h2 {
   text-transform: uppercase;
 
 }
-h3 {
+h3,  .featured-text a  {
   font-family: Helvetica-Neue, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: 300;
@@ -221,6 +221,9 @@ a:active {
   justify-content: center;
   align-items: center;
 }
+.image-container img {
+  width: 50%;
+}
 .featured-text {
   grid-row-start: 1;
   display: flex;
@@ -228,9 +231,10 @@ a:active {
   justify-content: center;
   align-items: flex-start;
 }
-.featured-text p {
+.featured-text p,  .featured-text a {
   color: #070707;
 }
+
 .about {
   height: 100vh;
   width: 100%;
@@ -437,6 +441,9 @@ a:active {
 }
 
 /* Main content articles */
+.articleContainer {
+  width: 80vw;
+}
 
 #main-content {
   height: 100vh;
@@ -509,3 +516,5 @@ a:active {
 html {
   scroll-behavior: smooth;
 }
+
+

@@ -1,10 +1,15 @@
-const ART_ARTICLES = ["American_Icon.html", "Whistler.html", "Edo.html"];
-const FILM_ARTICLES = [
-  "Amyl_and_the_sniffers.html",
+const ART_ARTICLES = [
+  "Cover_Art.html",
+  "American_Icon.html",
   "Whistler.html",
   "Edo.html",
-]; // TODO: ADD THE NAMES OF YOUR ARTICLES
-const MUSIC_ARTICLES = ["Kasabian.html", "Wet_leg.html", "Rex.html"];
+];
+const MUSIC_ARTICLES = [
+  "Cover_Music.html",
+  "Kasabian.html",
+  "Wet_leg.html",
+  "Rex.html",
+];
 
 const METADATA = ["person", "place", "event", "concept"];
 
@@ -99,9 +104,6 @@ $(document).ready(function () {
   switch (currentIssue) {
     case "art":
       currentArticles = ART_ARTICLES;
-      break;
-    case "film":
-      currentArticles = FILM_ARTICLES;
       break;
     case "music":
       currentArticles = MUSIC_ARTICLES;
