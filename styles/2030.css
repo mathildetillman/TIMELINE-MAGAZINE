@@ -241,6 +241,7 @@ blockquote {
     font-family:'UnifrakturMaguntia', cursive;
     transition: .2s ease-in;
     text-transform: capitalize;
+    cursor: pointer;
  }
  .cover {
     padding: 0;
