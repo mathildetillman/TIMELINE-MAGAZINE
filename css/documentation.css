@@ -12,3 +12,17 @@
 .image-display figure  img{
     width: 100%;
 }
+
+.color-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.color-container > div {
+    margin-right: 10px;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+}

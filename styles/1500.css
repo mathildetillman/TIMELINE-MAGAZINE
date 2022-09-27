@@ -7,7 +7,7 @@ html {
 }
 
 .articleContainer {
-  background-image: url("./images/1500_paper.jpg");
+  background-image: url("./images/paper.jpg");
   padding: 10em 10em 16em 6.25em;
 
   font-family: "Times New Roman", Times, serif;
@@ -65,7 +65,7 @@ h2 {
   text-align-last: center;
 }
 
-.articleContainer q {
+.articleContainer q, blockquote {
   font-style: italic;
   margin: 150px;
   font-size: 1.6em;

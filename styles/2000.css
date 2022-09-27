@@ -54,7 +54,7 @@ h2 {
   text-align-last: center;
 }
 
-.articleContainer q {
+.articleContainer q, blockquote {
   font-style: italic;
   font-weight: 700;
   font-size: 1.2em;
@@ -74,4 +74,63 @@ h2 {
 .quotePerson:before {
   content: "-";
   margin-right: 6px;
+}
+
+#headline {
+  text-transform: uppercase;
+  color: white
+}
+
+/* Cover */
+
+.coverContainer {
+  color: white;
+}
+
+.issue-name {
+  color: #f495cc;
+  text-transform: lowercase;
+  font-family: "Homemade apple", arial, serif;
+  margin-left: 30px;
+}
+
+.issue-name:after {
+  content: "!";
+  color: #f495cc;
+  font-family: "Homemade apple", arial, serif;
+}
+
+.headlinContainer {
+  margin-bottom: 100px;
+}
+
+.link-to-page {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+#article-one {
+  text-transform: uppercase;
+  color: #f2fd40;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+#float-r {
+  float: right;
+  width: 300px;
+}
+
+#article-two {
+  text-transform: capitalize;
+  font-style: italic;
+  color: #f495cc;
+  font-weight: 700;
+}
+
+#article-three {
+  text-transform: uppercase;
+  color: #f2fd40;
+  font-weight: 900;
+  font-size: 2.5em;
 }
