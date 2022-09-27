@@ -1,0 +1,14 @@
+.image-display {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    
+}
+
+.image-display figure{
+    width: 50%;
+}
+.image-display figure  img{
+    width: 100%;
+}
