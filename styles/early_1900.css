@@ -145,6 +145,12 @@ blockquote {
     border-top: 5px solid rgb(42,10,230);
     border-bottom: 5px solid rgb(42,10,230);
 }
+q {
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    
+}
 .coverContainer {
     width: 100%;
     display: flex;

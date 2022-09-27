@@ -124,6 +124,7 @@ position: relative;
   
   .articleContainer figcaption {
     font-size: 0.625em;
+    width: 50%;
   }
 
 .hero_image {
@@ -143,7 +144,8 @@ position: relative;
 
 figcaption {
     font-size: 0.625em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Space Mono', monospace;
+    
 
   }
 
@@ -167,6 +169,19 @@ blockquote {
     background-color: #a2a2a1;
  }
 
+ q {
+    font-family: 'Space Mono', monospace;
+    color: #070707;
+    line-height: .8em;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    width: 50%;
+    margin: auto;
+    font-size: 2rem;
+    padding: 2rem;
+
+ }
  .coverContainer {
     width: 100%;
     display: grid;
