@@ -70,3 +70,23 @@ h2 {
   margin: 150px;
   font-size: 1.6em;
 }
+
+/* Cover */
+
+.issue-name{
+  font-size: 1.5em;
+  color: black
+}
+
+.link-to-page {
+  margin-top: 50px;
+}
+
+.cover-link{
+  color: #444
+}
+
+.cover-link{
+  cursor: pointer;
+}
+

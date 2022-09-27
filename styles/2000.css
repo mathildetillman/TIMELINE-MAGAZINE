@@ -9,7 +9,6 @@ html {
 .articleContainer {
   padding: 100px;
   background-color: #006fb4;
-  line-height: 1.6em;
   font-family: franklin-gothic-atf, sans-serif;
 }
 
@@ -106,8 +105,12 @@ h2 {
 
 .link-to-page {
   margin-bottom: 50px;
+}
+
+.cover-link{
   cursor: pointer;
 }
+
 
 #article-one {
   text-transform: uppercase;
