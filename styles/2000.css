@@ -1,3 +1,8 @@
+@font-face {
+  font-family: homemadeApple;
+  src: url(HomemadeApple-Regular.ttf);
+}
+
 body,
 html {
   height: 100%;
@@ -88,14 +93,14 @@ h2 {
 .issue-name {
   color: #f495cc;
   text-transform: lowercase;
-  font-family: "Homemade apple", arial, serif;
+  font-family: homemadeApple, arial, serif;
   margin-left: 30px;
 }
 
 .issue-name:after {
   content: "!";
   color: #f495cc;
-  font-family: "Homemade apple", arial, serif;
+  font-family: homemadeApple, arial, serif;
 }
 
 .headlinContainer {
