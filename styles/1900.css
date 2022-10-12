@@ -67,7 +67,8 @@ position: relative;
     font-family: 'Righteous', cursive;
     text-transform: capitalize;
     color: #111111;
-    line-height: 1em;;
+    line-height: 1em;
+    text-align: justify;
    
 }
 .contentContainer {
