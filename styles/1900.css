@@ -141,9 +141,9 @@ blockquote {
     font-size: 24px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
-    color: rgb(42,10,230);
-    border-top: 5px solid rgb(42,10,230);
-    border-bottom: 5px solid rgb(42,10,230);
+    color: #086dc0;
+    border-top: 5px solid #086dc0;
+    border-bottom: 5px solid #086dc0;
 }
 q {
     text-transform: uppercase;
